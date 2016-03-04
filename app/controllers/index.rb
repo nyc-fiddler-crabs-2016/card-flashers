@@ -1,3 +1,3 @@
 get '/' do
-  "hello world?"
+  redirect '/decks'
 end
