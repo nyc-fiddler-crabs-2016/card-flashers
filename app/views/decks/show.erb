@@ -1,0 +1,9 @@
+<h1>Check out <%= @deck.name %>! </h1>
+<p> <%= @deck.description %> </p>
+
+<ul>
+  <% @deck.cards.each do |card|%>
+  <li><%= card.deck_id %></li>
+  <p>we should add an attribute to Card like question, front, back, etc. </p>
+  <% end %>
+</ul>
