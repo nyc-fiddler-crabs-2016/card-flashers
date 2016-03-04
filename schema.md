@@ -1,0 +1,1 @@
+![schema](/flashcards_schema.png)
