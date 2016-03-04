@@ -18,6 +18,8 @@ end
 
 50.times do
   Card.create(
+    question: Faker::Hacker.say_something_smart,
+    answer: "answer",
     deck_id: Deck.all.sample.id
     )
 end
