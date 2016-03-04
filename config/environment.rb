@@ -7,10 +7,10 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
-
+require 'faker'
 require 'uri'
 require 'pathname'
-
+require 'pry'
 require 'pg'
 require 'active_record'
 require 'logger'
