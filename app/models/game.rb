@@ -1,7 +1,7 @@
 class Game < ActiveRecord::Base
   # Remember to create a migration!
-  belongs_to :guess
+  has_many :guesses
   belongs_to :user
-  has_one :deck
+  belongs_to :deck
   has_many :cards, through: :deck
 end
