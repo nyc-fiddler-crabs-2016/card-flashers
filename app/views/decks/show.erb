@@ -4,5 +4,7 @@
 <ul>
   <% @deck.cards.each do |card|%>
   <li><%= card.question %></li>
+  <li><%= card.deck_id %></li>
+  <p>we should add an attribute to Card like question, front, back, etc. </p>
   <% end %>
 </ul>
