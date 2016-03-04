@@ -5,10 +5,7 @@
 
 <p>You have played <%= @user.games.length %> games! </p>
   <% @user.games.each do |game| %>
-
-
-
-
-
+    <p> You played <%= game.deck.name %> at <%= game.created_at.strftime("%Y-%m-%d") %>! </p>
+    <% end %>
 
 </div>
