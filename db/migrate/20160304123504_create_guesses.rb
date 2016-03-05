@@ -1,12 +1,15 @@
 class CreateGuesses < ActiveRecord::Migration
   def change
   	create_table :guesses do |t|
-  		t.string :guess_text
-  		t.references :game, index: true
-  		t.references :card, index: true
+  		t.string :guess_text, null: false
+  		t.references :game, index: true, null: false
+  		t.references :card, index: true, null: false
   		t.boolean :correct_answer?
-  		t.integer :attempts
+  		t.integer :attempts, default: 0
+
   		t.timestamps null: false
   	end
   end
 end
+
+#instead of attribute correct_answer, I think we can just run a guess.method in the model
