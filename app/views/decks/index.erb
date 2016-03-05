@@ -1,0 +1,9 @@
+<h1> Deck Index</h1>
+
+<ul>
+  <% @decks.each do |deck| %>
+<a href="/games/<%="#{deck.id}"%>"><li><%= deck.name %></li></a>
+
+<p> <%= deck.description %></p>
+  <% end %>
+</ul>
