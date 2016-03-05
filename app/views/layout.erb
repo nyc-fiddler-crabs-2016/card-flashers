@@ -18,9 +18,9 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
-</body>
-
+  <div class = "nav">
+<nav>
+  <h1>Get ready to be flashed ;)</h1>
 <%if logged_in?%>
   <a href="/">Home</a>
   <a href="/users/<%=session[:logged_in_id]%>">Profile</a>
@@ -28,5 +28,10 @@
 <% else %>
   <a href="/users/new">Create Profile</a>
 <%end%>
-
+</nav>
+</div>
+  <div class = "container">
+  <%= yield %>
+  </div>
+</body>
 </html>

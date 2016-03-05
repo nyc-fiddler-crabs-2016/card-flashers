@@ -1,0 +1,23 @@
+body{font-family:
+  "avenir";
+}
+
+.container{
+  width:800px;
+  margin:auto;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  padding: 2em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.nav{
+  padding: 5em;
+  padding-left: 14em;
+  background-color:#006666;
+
+
+}
+
