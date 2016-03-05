@@ -10,6 +10,9 @@ class Guess < ActiveRecord::Base
     self.guess_text == self.card.answer
   end
 
+  def self.first_guess?(game_id,card_id)
+    !self.find_by(game_id:game_id, card_id:card_id)
+  end
 
 end
 
