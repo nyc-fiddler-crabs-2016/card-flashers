@@ -12,3 +12,5 @@ class Card < ActiveRecord::Base
   end
 
 end
+
+# <%@game.deck.play_card.show_question%>
