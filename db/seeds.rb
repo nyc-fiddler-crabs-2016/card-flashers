@@ -25,7 +25,12 @@ end
 end
 
 
-
+2.times do
+  Game.create(
+    user_id:1,
+    deck_id:1
+    )
+end
 
 
 

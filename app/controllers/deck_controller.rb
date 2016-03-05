@@ -1,9 +1,17 @@
 get '/decks' do #decks index page. /decks is the url extension
-  @decks = Deck.all
-  erb :'/decks/index'
+  if logged_in?
+    @decks = Deck.all
+    erb :'/decks/index'
+  else
+    redirect :'/'
+  end
 end
 
 get '/decks/:id' do
-  @deck = Deck.find(params[:id])
-  erb :'/decks/show'
+  if logged_in?
+    @deck = Deck.find(params[:id])
+    erb :'/decks/show'
+  else
+    redirect :'/'
+  end
 end

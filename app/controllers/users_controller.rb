@@ -1,9 +1,5 @@
-get '/users' do
-  "hello"
-end
-
 get '/login' do
-  erb :'/users/login'
+    erb :'/users/login'
 end
 
 post '/login' do
@@ -21,12 +17,33 @@ post '/login' do
   end
 end
 
+get '/users/new' do
+  erb :'users/create'
+end
+
+post '/users' do
+  @user = User.create(user_name: params[:user_name], password: params[:password])
+
+  redirect '/'
+end
+
 get '/users/:id' do
-  if session[:logged_in_id] == params[:id].to_i
-    @user = User.find(params[:id])
-    erb :'/users/profile'
+  if logged_in?
+    if session[:logged_in_id] == params[:id].to_i
+      @user = User.find(params[:id])
+      erb :'/users/profile'
+    else
+      redirect '/login'
+    end
   else
-    redirect '/login'
+    redirect '/'
   end
 end
+
+get '/logout' do
+  session.clear
+  redirect '/'
+end
+
+
 

@@ -1,6 +1,13 @@
+<div>
+  <%= @current_card.question %>
+</div>
 
+<% if session[:messages] %>
+  <%= session[:messages] %>
+<% end %>
 
-<form action="/games/:id" method="POST">
+<form action="/games/<%="#{@game.id}"%>" method="POST">
   <input type="text" name="guess_text" placeholder="your guess">
-  <input type="submit" name="Try yo' luck">
+  <input type="hidden" name="card_id" value="<%= @current_card.id %>">
+  <input type="submit" value="Try yo' luck">
 </form>
