@@ -4,8 +4,6 @@ class CreateGuesses < ActiveRecord::Migration
   		t.string :guess_text, null: false
   		t.references :game, index: true, null: false
   		t.references :card, index: true, null: false
-  		t.boolean :correct_answer?
-  		t.integer :attempts, default: 0
 
   		t.timestamps null: false
   	end
